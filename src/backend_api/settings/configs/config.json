@@ -1,0 +1,21 @@
+{
+  "Interpolation": {
+    "nearest": false,
+    "bilinear": false,
+    "bicubic": false,
+    "lanczos": false
+  },
+  "DeepLearning": {
+    "DRCNN": false,
+    "EDSR": false,
+    "ESPCN": false,
+    "FSRCNN": false,
+    "LapSRN": false,
+    "VDSR": false
+  },
+  "EdgePreserve": {
+    "ICBI": false,
+    "INEDI": false
+  }
+}
+

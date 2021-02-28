@@ -1,0 +1,749 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>409</width>
+    <height>1025</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>50</y>
+     <width>391</width>
+     <height>56</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="grid_BaseSetting">
+    <item row="1" column="1">
+     <widget class="QComboBox" name="ScaleRatio">
+      <item>
+       <property name="text">
+        <string>2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>3</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>4</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>8</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QComboBox" name="Mode">
+      <item>
+       <property name="text">
+        <string>Experiment</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Production</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_ScaleRatio">
+      <property name="text">
+       <string>Scale Ratio</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="label_Mode">
+      <property name="text">
+       <string>Mode</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLabel" name="title_SISR_Setting">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>481</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>23</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Single-Image Super-Resolution Setting</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="title_ModelSetting">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>240</y>
+     <width>481</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Model Setting</string>
+   </property>
+  </widget>
+  <widget class="Line" name="divider">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>120</y>
+     <width>411</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QWidget" name="gridLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>400</y>
+     <width>388</width>
+     <height>591</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="grid_ModelSetting">
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item row="25" column="2">
+     <widget class="QCheckBox" name="LapSRN">
+      <property name="text">
+       <string>  LapSRN</string>
+      </property>
+     </widget>
+    </item>
+    <item row="17" column="0" colspan="3">
+     <widget class="Line" name="divider_8">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="16" column="0">
+     <widget class="QLabel" name="label_13">
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>25</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>15</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Deep-Learning</string>
+      </property>
+     </widget>
+    </item>
+    <item row="26" column="2">
+     <widget class="QCheckBox" name="FSRCNN">
+      <property name="text">
+       <string>  FSRCNN</string>
+      </property>
+     </widget>
+    </item>
+    <item row="15" column="0" colspan="3">
+     <widget class="Line" name="divider_7">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="19" column="1">
+     <widget class="QLabel" name="EDSR_available">
+      <property name="maximumSize">
+       <size>
+        <width>10</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>x</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="18" column="1">
+     <widget class="QLabel" name="DRCNN_available">
+      <property name="maximumSize">
+       <size>
+        <width>10</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>x</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="23" column="2">
+     <widget class="QCheckBox" name="VDSR_Bicubic">
+      <property name="text">
+       <string>  VDSR_Bicubic</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="2">
+     <widget class="QCheckBox" name="Bilinear">
+      <property name="text">
+       <string>  Bilinear</string>
+      </property>
+     </widget>
+    </item>
+    <item row="13" column="2">
+     <widget class="QCheckBox" name="INEDI">
+      <property name="toolTip">
+       <string>improved Non-local Edge Directed Interpolation</string>
+      </property>
+      <property name="toolTipDuration">
+       <number>2</number>
+      </property>
+      <property name="text">
+       <string>  iNEDI</string>
+      </property>
+     </widget>
+    </item>
+    <item row="12" column="0" colspan="3">
+     <widget class="Line" name="divider_10">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="25" column="1">
+     <widget class="QLabel" name="LapSRN_available">
+      <property name="maximumSize">
+       <size>
+        <width>10</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>x</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="11" column="0">
+     <widget class="QLabel" name="label_12">
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>25</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>15</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Edge-Preserve</string>
+      </property>
+     </widget>
+    </item>
+    <item row="13" column="1">
+     <widget class="QLabel" name="INEDI_available">
+      <property name="maximumSize">
+       <size>
+        <width>10</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>x</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="22" column="2">
+     <widget class="QCheckBox" name="VDSR_Bilinear">
+      <property name="text">
+       <string>  VDSR_Bilinear</string>
+      </property>
+     </widget>
+    </item>
+    <item row="21" column="2">
+     <widget class="QCheckBox" name="VDSR_Nearest">
+      <property name="text">
+       <string>  VDSR_Nearest</string>
+      </property>
+     </widget>
+    </item>
+    <item row="10" column="0" colspan="3">
+     <widget class="Line" name="divider_6">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="20" column="1">
+     <widget class="QLabel" name="ESPCN_available">
+      <property name="maximumSize">
+       <size>
+        <width>10</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>x</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="18" column="2">
+     <widget class="QCheckBox" name="DRCNN">
+      <property name="text">
+       <string>  DRCNN</string>
+      </property>
+     </widget>
+    </item>
+    <item row="24" column="2">
+     <widget class="QCheckBox" name="VDSR_Lanczos">
+      <property name="text">
+       <string>  VDSR_Lanczos</string>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="2">
+     <widget class="QCheckBox" name="Lanczos">
+      <property name="text">
+       <string>  Lanczos</string>
+      </property>
+     </widget>
+    </item>
+    <item row="26" column="1">
+     <widget class="QLabel" name="FSRCNN_available">
+      <property name="maximumSize">
+       <size>
+        <width>10</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>x</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="19" column="2">
+     <widget class="QCheckBox" name="EDSR">
+      <property name="text">
+       <string>  EDSR</string>
+      </property>
+     </widget>
+    </item>
+    <item row="20" column="2">
+     <widget class="QCheckBox" name="ESPCN">
+      <property name="text">
+       <string>  ESPCN</string>
+      </property>
+     </widget>
+    </item>
+    <item row="14" column="1">
+     <widget class="QLabel" name="ICBI_available">
+      <property name="maximumSize">
+       <size>
+        <width>10</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>x</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="2">
+     <widget class="QCheckBox" name="Check_all">
+      <property name="text">
+       <string>  Check All</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="2">
+     <widget class="QCheckBox" name="Bicubic">
+      <property name="text">
+       <string>  Bicubic</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <widget class="QLabel" name="label_7">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>20</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>Up-Sampling Method</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0" colspan="3">
+     <widget class="Line" name="divider_3">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="0" colspan="3">
+     <widget class="Line" name="divider_11">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="2">
+     <widget class="QCheckBox" name="Nearest">
+      <property name="text">
+       <string>  Nearest</string>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+      <property name="checked">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="label_11">
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>25</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>15</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Interpolation</string>
+      </property>
+     </widget>
+    </item>
+    <item row="14" column="2">
+     <widget class="QCheckBox" name="ICBI">
+      <property name="toolTip">
+       <string>interative Curve Based Interpolation</string>
+      </property>
+      <property name="text">
+       <string>  iCBI</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="1">
+     <widget class="QLabel" name="INEDI_available_2">
+      <property name="maximumSize">
+       <size>
+        <width>10</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>O</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QPushButton" name="OK">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>990</y>
+     <width>113</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>OK</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Cancel">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>990</y>
+     <width>113</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cancel</string>
+   </property>
+  </widget>
+  <widget class="Line" name="divider_2">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>230</y>
+     <width>411</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="ImageSelect">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>200</y>
+     <width>26</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>...</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="title_SISR_Setting_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>140</y>
+     <width>481</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Image Selection</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="title_ModelSetting_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>170</y>
+     <width>191</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>300</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <property name="text">
+    <string>Select Image for this program:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>200</y>
+     <width>141</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Selected Image Name:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="SelectedImageName">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>200</y>
+     <width>201</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>*******************************</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="title_ModelSetting_3">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>260</y>
+     <width>481</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>* Caution: (CPU: i7-8750H)</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="title_ModelSetting_4">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>280</y>
+     <width>481</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>If image size is larger than 512*512,</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="title_ModelSetting_5">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>300</y>
+     <width>481</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Each Edge-Preserve method may take longer than 10mins.</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="title_ModelSetting_6">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>320</y>
+     <width>481</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Each Deep-Learning method can require more than 1mins.</string>
+   </property>
+  </widget>
+  <widget class="Line" name="divider_4">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>380</y>
+     <width>411</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="divider_5">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>380</y>
+     <width>411</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="line">
+   <property name="geometry">
+    <rect>
+     <x>226</x>
+     <y>428</y>
+     <width>20</width>
+     <height>561</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="title_ModelSetting_7">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>340</y>
+     <width>481</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Please, Check Nearest if you set Mode: Production.</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="title_ModelSetting_8">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>360</y>
+     <width>481</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Production mode uses Nearest method as baseline.</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
