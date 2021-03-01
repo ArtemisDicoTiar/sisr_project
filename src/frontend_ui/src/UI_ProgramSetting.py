@@ -20,6 +20,7 @@ from src.frontend_ui.src.components.processing import ProcessWindow
 
 class UI_Setting(QtWidgets.QDialog):
     def __init__(self, parent=None):
+        os.system('mkdir ./{cur_dir}')
         self.program_setting = ProgramSetting()
 
         self.target_image = str()
